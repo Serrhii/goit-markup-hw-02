@@ -1,9 +1,12 @@
 :root {
   --primary-fond: "Roboto", sans-serif;
+  --secondary-fond: "Raleway", sans-serif;
   --primary-text-color-theme-light: #434455;
   --primary-text-color-theme-dark: #ffffff;
-  --secondary-fond: "Raleway", sans-serif;
+  --text-color-theme-dark: #e7e9fc;
+  --main-color: #4d5ae5;
   --brand-color: #2e2f42;
+  --secondary-background-color: #f4f4fd;
 }
 
 body {
@@ -19,37 +22,49 @@ ul {
 
 /* HEADER */
 .acent {
-  color: #4d5ae5;
+  color: var(--main-color);
 }
 
 .logo {
   font-family: var(--secondary-fond);
-  font-weight: 700;
+  font-weight: 800;
   font-size: 18px;
   line-height: 1.33;
   letter-spacing: 0.03em;
+  text-transform: uppercase;
   color: var(--brand-color);
 }
 
-.menu {
+.menu-link {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
+  color: var(--brand-color);
 }
 
-.contacts {
+.menu-link:hover,
+.menu-link:focus {
+  color: var(--main-color);
+}
+
+.contacts-link {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  
+  color: var(--brand-color);
+}
+
+.contacts-link:hover,
+.contacts-link:focus {
+  color: var(--main-color);
 }
 
 .menu:hover,
 .menu:focus,
 .contacts:hover,
 .contacts:focus {
-color: #4d5ae5;
+  color: var(--main-color);
 }
 
 /* HERO */
@@ -70,27 +85,36 @@ color: #4d5ae5;
   font-family: inherit;
   font-weight: 500;
   font-size: 16px;
-  line-height: 1, 18;
+  line-height: 1.18;
   letter-spacing: 0.04em;
   cursor: pointer;
+  background-color: var(--main-color);
+  color: var(--primary-text-color-theme-dark);
 }
 
 .btn:hover,
-.btn:focus,
-.btn-services:hover,
-.btn-services:focus {
-  background-color: #4d5ae5;
-  color: #ffffff;
+.btn:focus {
+  color: var(--primary-text-color-theme-dark);
+  background-color: #404bbf;
 }
 
 /* SKILLS */
 
-.skills-front-title {
-  display: none;
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
 }
 
 .skills-title {
-  font-weight: 500;
+  font-weight: 700;
   font-size: 20px;
   line-height: 1.2;
   letter-spacing: 0.02em;
@@ -98,7 +122,6 @@ color: #4d5ae5;
 }
 
 .skills-text {
-  font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
@@ -106,18 +129,18 @@ color: #4d5ae5;
 }
 
 .title {
-  font-weight: 500;
+  font-weight: 700;
   font-size: 36px;
   line-height: 1.11;
   letter-spacing: 0.02em;
 }
 /* TEAM */
 .team {
-  background: #f4f4fd;
+  background: var(--secondary-background-color);
 }
 .title-team {
   font-family: var(--primary-fond);
-  font-weight: 500;
+  font-weight: 700;
   font-size: 36px;
   line-height: 1.11;
   text-align: center;
@@ -127,7 +150,7 @@ color: #4d5ae5;
 
 .item-team-title {
   font-family: var(--primary-fond);
-  font-weight: 500;
+  font-weight: 700;
   font-size: 20px;
   line-height: 1.2;
   letter-spacing: 0.02em;
@@ -142,29 +165,29 @@ color: #4d5ae5;
   color: var(--primary-text-color-theme-light);
 }
 
+.item-team {
+  background-color: var(--primary-text-color-theme-dark);
+}
+
 /* FOOTER */
 
 .footer {
   background: var(--brand-color);
 }
 .studio {
-  color: #f4f4fd;
+  color: var(--secondary-background-color);
 }
 .footer-text {
   font-family: var(--primary-fond);
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  color: #e7e9fc;
+  color: var(--text-color-theme-dark);
 }
 
 /* SERVICES */
 
-.title-services {
-  display: none;
-}
-
-.btn-services {
+.btn.primary {
   font-family: inherit;
   font-weight: 500;
   font-size: 16px;
@@ -172,19 +195,25 @@ color: #4d5ae5;
   display: flex;
   letter-spacing: 0.04em;
   cursor: pointer;
+  color: var(--main-color);
+  background-color: var(--secondary-background-color);
+}
+
+.btn.primary:hover,
+.btn.primary:focus {
+  color: var(--primary-text-color-theme-dark);
+  background-color: var(--main-color);
 }
 
 .gallery-title {
   font-family: var(--primary-fond);
-  font-style: normal;
-  font-weight: 500;
+  font-weight: 700;
   font-size: 20px;
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: var(--brand-color);
 }
 .gallery-text {
-  font-family: var(--primary-fond);
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
